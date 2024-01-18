@@ -1,24 +1,35 @@
-.square{
-    border: black solid 2px;
-    height: 350px;
-    width: 350px;
-  margin:5px;
-  padding: 5px;
-   display: flex;
-
+body {
+height: 130vh;
 }
-
-.parent{
- display: grid;
- grid-template-columns: 400px 300px;
- align-items: center;
- justify-content: center;
+  .container {
+    display: grid;
+    grid-template-columns: 375px 300px ;
+    align-items: center;
+    justify-content: center;
  padding: 10%;
- 
-}
+  }
 
-@media screen and (max-width: 768px) {
-    .parent {
-        grid-template-columns: 1fr;
+.square {
+border: black solid 2px;
+height: 350px;
+width: 350px;
+margin: 5px;
+padding: 5px;
+display: flex;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
     }
-}
+  }
+
+
+  .text {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
