@@ -27,8 +27,8 @@ display: flex;
   }
 
 
-  .text {
-    position: fixed;
+  footer{
+    position: auto;
     bottom: 0;
     left: 0;
     right: 0;
