@@ -5,6 +5,8 @@
 }
 body{
     font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .sidePic{
@@ -33,4 +35,10 @@ form{
     position: absolute;
     top:90px;
     left:800px;
+}
+
+.happy{
+    position: absolute;
+    left:90px;
+    top:150px;
 }
