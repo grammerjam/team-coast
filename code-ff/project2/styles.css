@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.sidePic{
+margin-left: -300px;
+width:55%;
+height:100%;
+position: relative;
+}
+.container{
+    position: relative;
+}
+.frontCard{
+    position: absolute;
+    right: 800px;
+    top:40px;
+    
+}
+
+.backCard{
+    position: absolute;
+    right: 700px;
+    top:300px;
+}
+
+form{
+    position: absolute;
+    top:90px;
+    left:800px;
+}
