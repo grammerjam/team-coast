@@ -1,12 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 body{
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 500;
     font-size: 18px;
+    overflow: visible;
 }
 
 .sidePic{
@@ -33,8 +30,8 @@ position: relative;
 
 form{
     position: absolute;
-    top:90px;
-    left:800px;
+    top: 175px;
+    left: 725px;
 }
 
 .happy{
@@ -42,3 +39,62 @@ form{
     left:90px;
     top:150px;
 }
+
+/* @media screen and (max-width: 1200px) {
+    .sidePic {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .frontCard,
+    .backCard,
+    form,
+    .happy {
+      position: static;
+      margin: 20px ;
+    }
+  } */
+  
+  @media screen and (max-width: 1196px) {
+
+    body{
+      overflow: scroll;
+    }
+  
+
+      .container{
+        margin-left: 80px;
+      
+    }
+    .sidePic {
+      display: none;
+    }
+  
+    .frontCard,
+    .backCard,
+    form {
+      position: static;
+      margin: 20px 0;
+    }
+  
+    .happy {
+      position: absolute;
+      left: 90px;
+      top: 150px;
+    }
+  
+    .frontCard,
+    .backCard {
+      order: 1; 
+    }
+  
+    form {
+      order: 2; 
+      margin-left: 85px;
+    }
+
+  }
+
+  #error{
+    color: red;
+  }

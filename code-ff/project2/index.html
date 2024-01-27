@@ -22,8 +22,7 @@
   <div class="flex w-full flex-wrap items-center justify-between px-3">
     <div class="ml-2">
       <a class="text-xl text-neutral-800 dark:text-neutral-200" href="#"
-        >Team Coast</a
-      >
+        >Team Coast</a>
     </div>
   </div>
 </nav>
@@ -31,17 +30,21 @@
   <img class= "sidePic" src="./images/bg-main-desktop.png"/>
 
   </p>
+  <div class="imageContainer">
 <img class="frontCard" src="./images/bg-card-front.png"/>
+</div>
 <img class="backCard" src="./images/bg-card-back.png"/>
 </div>
-<form class="w-full max-w-lg">
+
+<form id="form" class="w-full max-w-lg">
+  <div id="error"></div>
   <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
         Cardholder First Name
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane" oninput="getValue()">
-      <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+      <input id="firstName" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"  type="text" placeholder="Jane" oninput="getValue()">
+      <!-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> -->
     </div>
     <div class="w-full md:w-1/2 px-3">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
@@ -52,10 +55,10 @@
   </div>
   <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full px-3">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-cardnum">
         Card Number
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="12334567890">
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-cardnum" type="text" placeholder="12334567890">
       <p class="text-gray-600 text-xs italic"></p>
     </div>
   </div>
@@ -70,9 +73,12 @@
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
         CVC
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="123">
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-cvc" type="text" placeholder="123">
     </div>
   </div>
+  <button type="submit" class="bg-purple-900 hover:bg-blue-700 text-white font-bold py-2 px-20 rounded">
+   Confirm
+  </button>
 </form>
 
 
@@ -83,10 +89,12 @@
   <!-- Confirm
 
   <!-- Completed state start -->
-
-  <!-- Thank you!
-  We've added your card details
-  Continue --> 
+<div >
+<h2 class="thankYou">  Thank you! </h2>
+  <h4 class="weAdded">We've added your card details
+  Continue </h4>
+</div>
+ 
   <script src="script.js"></script>
 </body>
 </html>
