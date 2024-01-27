@@ -5,8 +5,9 @@ const lastName = document.getElementById("grid-last-name")
 const cardNumber= document.getElementById("grid-cardnum")
 const expDate = document.getElementById("grid-city")
 const cvc = document.getElementById("grid-cvc")
+const subForm = document.getElementById("subForm")
 
-
+    
 form.addEventListener('submit',(e) =>{
   
    let messages = []
@@ -37,10 +38,11 @@ form.addEventListener('submit',(e) =>{
    if (cvc.value === NaN){
        messages.push("Numbers only")
    }
-
    if (messages.length > 0){
    e.preventDefault()
    errorElement.innerText = messages.join (', ')
+   } else {
+   subForm.style.display='block'
    }
 })
 
@@ -52,3 +54,4 @@ function getValue() {
     let result = document.getElementById("show");
     result.innerText=textValue;
 }
+

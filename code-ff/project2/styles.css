@@ -5,7 +5,7 @@ body{
     font-size: 18px;
     overflow: visible;
 }
-
+ 
 .sidePic{
 margin-left: -300px;
 width:55%;
@@ -40,20 +40,6 @@ form{
     top:150px;
 }
 
-/* @media screen and (max-width: 1200px) {
-    .sidePic {
-      margin-left: 0;
-      width: 100%;
-    }
-  
-    .frontCard,
-    .backCard,
-    form,
-    .happy {
-      position: static;
-      margin: 20px ;
-    }
-  } */
   
   @media screen and (max-width: 1196px) {
 
@@ -98,3 +84,5 @@ form{
   #error{
     color: red;
   }
+
+  
