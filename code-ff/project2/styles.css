@@ -34,6 +34,12 @@ form{
     left: 725px;
 }
 
+#subForm{
+  position: absolute;
+  top: 175px;
+  left: 725px;
+}
+
 .happy{
     position: absolute;
     left:90px;
@@ -62,6 +68,10 @@ form{
       position: static;
       margin: 20px 0;
     }
+
+    #subForm{
+      position:static;
+    }
   
     .happy {
       position: absolute;
@@ -78,6 +88,11 @@ form{
       order: 2; 
       margin-left: 85px;
     }
+    subform{
+      order: 2;
+
+      
+    }
 
   }
 
@@ -85,4 +100,10 @@ form{
     color: red;
   }
 
+  .thankYou{
+    color: purple;
+    font-weight: bold;
+  }
+
+  
   

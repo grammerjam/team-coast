@@ -7,44 +7,56 @@ const expDate = document.getElementById("grid-city")
 const cvc = document.getElementById("grid-cvc")
 const subForm = document.getElementById("subForm")
 
-    
+   
 form.addEventListener('submit',(e) =>{
   
    let messages = []
-   if (firstName.value === '') {
-       messages.push(' First Name is required')
-   }
+  if (firstName.value === '') {
+    messages.push('First Name is required');
+}
 
-   if (lastName.value === ''){
-       messages.push ("Last name is required")
-   }
+if (lastName.value === '') {
+    messages.push("Last name is required");
+}
 
-   if (cardNumber.value === NaN){
-       messages.push ("Numbers only")
-   }
+if (isNaN(parseInt(cardNumber.value))) {
+    messages.push("Card number must be a number");
+}
 
-   if (cardNumber.value.length < 15) {
-       messages.push('Invalid card number')
+if (cardNumber.value.length < 15) {
+    messages.push('Invalid card number');
+}
+
+if (expDate.value === '') {
+    messages.push("Must provide expiration date");
+}
+
+if (isNaN(parseInt(expDate.value))) {
+    messages.push("Expiration date must be a number");
+}
+
+if (cvc.value === '') {
+    messages.push("Must provide CVC");
+}
+
+if (isNaN(parseInt(cvc.value))) {
+    messages.push("CVC must be a number");
+
    }
-   if (expDate.value ===''){
-       messages.push("Must provide expiration date")
-   }
-   if (expDate.value === NaN){
-    messages.push( "Exp.cdate must be a number" )
-   }
-   if (cvc.value === ''){
-    messages.push ("Must provide CVC")
-   }
-   if (cvc.value === NaN){
-       messages.push("Numbers only")
-   }
-   if (messages.length > 0){
+   if (messages.length > 0) {
    e.preventDefault()
    errorElement.innerText = messages.join (', ')
-   } else {
-   subForm.style.display='block'
+   console.log("submitted")
+
+   return;
    }
+   e.preventDefault();
+    form.style.display="none"
+    subForm.style.display="block"
+   
 })
+
+
 
 
 function getValue() {
