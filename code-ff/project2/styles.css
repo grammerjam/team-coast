@@ -5,6 +5,8 @@ body{
     font-size: 18px;
     overflow: visible;
 }
+
+
  
 .sidePic{
 margin-left: -300px;
@@ -40,12 +42,62 @@ form{
   left: 725px;
 }
 
-.happy{
+.cardFirstName{
     position: absolute;
     left:90px;
-    top:150px;
+    top:280px;
 }
 
+#cardLastName{
+  position: absolute;
+  left: 160px;
+  top:280px;
+
+}
+
+#cardNumber{
+  position:absolute;
+  left: 90px;
+  top:250px;
+
+}
+
+#cardExpDate{
+position: absolute;
+left:300px;
+top:280px;
+
+}
+
+#cardCvc{
+  position:absolute;
+  left:480px;
+  top:470px;
+
+}
+
+
+@media  screen and (max-width:375px){
+  
+  body{
+    height:100%;
+  }
+
+  .frontCard,
+  .backCard,
+  form,
+  #subForm,
+  .cardFirstName,
+  #cardLastName,
+  #cardNumber,
+  #cardExpDate,
+  #cardCvc {
+    position: static; 
+    left: auto;
+    top: auto;
+  }
+
+}
   
   @media screen and (max-width: 1196px) {
 
@@ -73,11 +125,11 @@ form{
       position:static;
     }
   
-    .happy {
+    /* .happy {
       position: absolute;
       left: 90px;
       top: 150px;
-    }
+    } */
   
     .frontCard,
     .backCard {

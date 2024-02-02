@@ -3,9 +3,10 @@ const errorElement=document.getElementById("error")
 const firstName = document.getElementById("firstName")
 const lastName = document.getElementById("grid-last-name")
 const cardNumber= document.getElementById("grid-cardnum")
-const expDate = document.getElementById("grid-city")
+const expDate = document.getElementById("grid-exp")
 const cvc = document.getElementById("grid-cvc")
 const subForm = document.getElementById("subForm")
+const inputElements= document.getElementsByTagName("input")
 
    
 form.addEventListener('submit',(e) =>{
@@ -17,10 +18,6 @@ form.addEventListener('submit',(e) =>{
 
 if (lastName.value === '') {
     messages.push("Last name is required");
-}
-
-if (isNaN(parseInt(cardNumber.value))) {
-    messages.push("Card number must be a number");
 }
 
 if (cardNumber.value.length < 15) {
@@ -56,14 +53,30 @@ if (isNaN(parseInt(cvc.value))) {
    
 })
 
-
-
-
-function getValue() {
-    let textInput = document.getElementById("firstName");
+function getValue(inputId, displayId) {
+    let textInput = document.getElementById(inputId);
     let textValue= textInput.value;
 
-    let result = document.getElementById("show");
+    let result = document.getElementById(displayId);
     result.innerText=textValue;
 }
+
+// function updateCard() {
+   
+
+
+  
+//     let firstName = document.getElementById("firstName").value;
+//     let lastName = document.getElementById("grid-last-name").value;
+//     let cardNumber = document.getElementById("grid-cardnum").value;
+//     let expDate = document.getElementById("grid-city").value;
+//     let cvc = document.getElementById("grid-cvc").value;
+
+   
+//     document.getElementById("cardFirstName").innerText = firstName;
+//     document.getElementById("cardLastName").innerText = lastName;
+//     document.getElementById("cardNumber").innerText = cardNumber;
+//     document.getElementById("cardExpDate").innerText = expDate;
+//     document.getElementById("cardCvc").innerText = cvc;
+//   }
 

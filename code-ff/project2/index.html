@@ -44,14 +44,14 @@
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
         Cardholder First Name
       </label>
-      <input id="firstName" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"  type="text" placeholder="Jane" oninput="getValue()">
+      <input id="firstName" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"  type="text" placeholder="Jane" oninput="getValue('firstName','show')">
       <!-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> -->
     </div>
     <div class="w-full md:w-1/2 px-3">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
         Last Name
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Appleseed">
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Appleseed" oninput="getValue('grid-last-name', 'cardLastName')">
     </div>
   </div>
   <div class="flex flex-wrap -mx-3 mb-6">
@@ -59,43 +59,48 @@
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-cardnum">
         Card Number
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-cardnum" type="text" placeholder="12334567890">
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-cardnum" type="text" placeholder="12334567890" oninput="getValue('grid-cardnum', 'cardNumber')">
       <p class="text-gray-600 text-xs italic"></p>
     </div>
   </div>
   <div class="flex flex-wrap -mx-3 mb-2">
     <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-exp">
         Exp. Date 
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="(MM/YY)">
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-exp" type="text" placeholder="(MM/YY)" oninput="getValue('grid-exp', 'cardExpDate')">
     </div>
     <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
         CVC
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-cvc" type="text" placeholder="123">
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-cvc" type="text" placeholder="123" oninput="getValue('grid-cvc', 'cardCvc')">
     </div>
   </div>
-  <button type="submit" class="bg-purple-900 hover:bg-blue-700 text-white font-bold py-2 px-20 rounded">
+  <br>
+  <button onclick="updateCard()" type="submit" class="bg-purple-900 hover:bg-blue-700 text-white font-bold py-2 px-20 rounded">
    Confirm
   </button>
 </form>
 
 
-<p class= "happy"id="show">
+  <p class= "cardFirstName" id="show"></p>
+      <p id="cardLastName" ></p>   
+        <p id="cardNumber" ></p>
+          <p id="cardExpDate" ></p>
+            <p id="cardCvc" ></p>
 
-</p>
+      
+    
 
-  
 
-  <!-- Completed state start -->
 <div style="display:none" id="subForm" >
 <h2 class="thankYou">  Thank you! </h2>
 <img class="checkMark" src="./images/checkmark.jpeg">
   <h4 class="weAdded">We've added your card details
    </h4>
-   <button onclick="window.location.reload();">Continue</button>
+   <br>
+   <button class="bg-purple-900 hover:bg-blue-700 text-white font-bold py-2 px-20 rounded" onclick="window.location.reload();">Continue</button>
 </div>
  
   <script src="script.js"></script>
