@@ -23,6 +23,9 @@ if (lastName.value === '') {
 if (cardNumber.value.length < 15) {
     messages.push('Invalid card number');
 }
+if (cardNumber.value.length > 15 ){
+    messages.push('Invalid card number')
+}
 
 if (expDate.value === '') {
     messages.push("Must provide expiration date");
@@ -61,22 +64,10 @@ function getValue(inputId, displayId) {
     result.innerText=textValue;
 }
 
-// function updateCard() {
+
    
 
 
   
-//     let firstName = document.getElementById("firstName").value;
-//     let lastName = document.getElementById("grid-last-name").value;
-//     let cardNumber = document.getElementById("grid-cardnum").value;
-//     let expDate = document.getElementById("grid-city").value;
-//     let cvc = document.getElementById("grid-cvc").value;
 
-   
-//     document.getElementById("cardFirstName").innerText = firstName;
-//     document.getElementById("cardLastName").innerText = lastName;
-//     document.getElementById("cardNumber").innerText = cardNumber;
-//     document.getElementById("cardExpDate").innerText = expDate;
-//     document.getElementById("cardCvc").innerText = cvc;
-//   }
 
