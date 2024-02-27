@@ -23,7 +23,7 @@ if (lastName.value === '') {
 if (cardNumber.value.length < 15) {
     messages.push('Invalid card number');
 }
-if (cardNumber.value.length > 15 ){
+if (cardNumber.value.length > 20 ){
     messages.push('Invalid card number')
 }
 
