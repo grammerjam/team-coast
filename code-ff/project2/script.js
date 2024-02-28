@@ -29,6 +29,16 @@ if (cardNumber.value.length > 20 ){
 
 if (expDate.value === '') {
     messages.push("Must provide expiration date");
+} else {
+
+    const today = new Date();
+    const inputDateParts = expDate.value.split('/');
+    const expirationMonth = parseInt(inputDateParts[0]) - 1; 
+    const expirationYear = parseInt(inputDateParts[1]) + 2000; 
+    const expirationDate = new Date(expirationYear, expirationMonth, 1); 
+    if (expirationDate <= today) {
+        messages.push("Expiration date must be in the future");
+    }
 }
 
 if (isNaN(parseInt(expDate.value))) {
