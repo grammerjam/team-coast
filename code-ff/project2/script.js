@@ -21,7 +21,9 @@ form.addEventListener('submit',(e) =>{
 if (lastName.value === '') {
     messages.push("Last name is required");
 }
-
+if (isNaN(parseInt(cardNumber.value)) || !(/^\d+$/.test(cardNumber.value))) {
+    messages.push("invalid card number");
+}
 if (cardNumber.value.length < 15) {
     messages.push('Invalid card number');
 }
