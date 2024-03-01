@@ -45,33 +45,33 @@ form{
 .cardFirstName{
     position: absolute;
     left:90px;
-    top:280px;
+    top:250px;
 }
 
 #cardLastName{
   position: absolute;
   left: 160px;
-  top:280px;
+  top:250px;
 
 }
 
 #cardNumber{
   position:absolute;
   left: 90px;
-  top:250px;
+  top:220px;
 
 }
 
 #cardExpDate{
 position: absolute;
 left:300px;
-top:280px;
+top:260px;
 
 }
 
 #cardCvc{
   position:absolute;
-  left:480px;
+  left:409px;
   top:470px;
 
 }
@@ -81,6 +81,12 @@ top:280px;
   
   body{
     height:100%;
+  }
+  #cardCvc{
+    position:absolute;
+    left:400px;
+    top:420px;
+  
   }
 
   .frontCard,
@@ -96,6 +102,7 @@ top:280px;
     left: auto;
     top: auto;
   }
+  
 
 }
   
@@ -125,11 +132,7 @@ top:280px;
       position:static;
     }
   
-    /* .happy {
-      position: absolute;
-      left: 90px;
-      top: 150px;
-    } */
+    
   
     .frontCard,
     .backCard {

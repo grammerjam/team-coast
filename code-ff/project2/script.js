@@ -8,6 +8,8 @@ const cvc = document.getElementById("grid-cvc")
 const subForm = document.getElementById("subForm")
 const inputElements= document.getElementsByTagName("input")
 
+
+
    
 form.addEventListener('submit',(e) =>{
   
@@ -49,7 +51,7 @@ if (cvc.value === '') {
     messages.push("Must provide CVC");
 }
 
-if (isNaN(parseInt(cvc.value))) {
+if (isNaN(parseInt(cvc.value)) || !(/^\d+$/.test(cvc.value))) {
     messages.push("CVC must be a number");
 
    }
